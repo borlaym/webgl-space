@@ -15,7 +15,7 @@ function init() {
 	scene = new THREE.Scene();
 
 	camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.01, 10000 );
-	spaceTexture = THREE.ImageUtils.loadTexture('../textures/dark-space-texture.png');
+	spaceTexture = THREE.ImageUtils.loadTexture('textures/dark-space-texture.png');
 	redMaterial = new THREE.MeshLambertMaterial( { color: 0x3f3f3f } );
 	redMaterial.side = THREE.DoubleSide;
 	redMaterial.transparent = true;
@@ -24,7 +24,7 @@ function init() {
 	spaceMaterial.map = spaceTexture;
 	spaceMaterial.side = THREE.DoubleSide;
 
-	loader.load('../models/cockpit.js', function (geometry, mat) {
+	loader.load('models/cockpit.js', function (geometry, mat) {
 		geometry.scale.x = 15;
 		geometry.scale.y = 15;
 		geometry.scale.z = 15;
